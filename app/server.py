@@ -17,7 +17,7 @@ app = Flask(__name__)
 load_dotenv()
 
 API_KEY = os.getenv('API_KEY', DEFAULT_CONFIGS["API_KEY"])
-HOST = int(os.getenv('HOST', str(DEFAULT_CONFIGS["HOST"])))
+HOST = os.getenv('HOST', DEFAULT_CONFIGS["HOST"])
 PORT = int(os.getenv('PORT', str(DEFAULT_CONFIGS["PORT"])))
 
 DEFAULT_VOICE = os.getenv('DEFAULT_VOICE', DEFAULT_CONFIGS["DEFAULT_VOICE"])
